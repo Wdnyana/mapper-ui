@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/theme.css" layer(theme);
+
+@config "../../tailwind.config.js";
+
+@plugin "@tailwindcss/typography";
+
+@layer base {
+
+}
