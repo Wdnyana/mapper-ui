@@ -1,12 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Passion+One:wght@700;900&display=swap');
+
 @import "tailwindcss";
 @import "tailwindcss/utilities.css" layer(utilities);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/theme.css" layer(theme);
 
 @config "../../tailwind.config.js";
-
 @plugin "@tailwindcss/typography";
 
-@layer base {
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
 
+@layer base {
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :root {
+    --background: 206 58% 26%;
+    --foreground: 48 43% 89%;
+    --primary: 169 41% 39%;
+    --secondary: 174 35% 59%;
+
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+    --primary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 169 41% 39%;
+
+    --radius: 0.5rem;
+  }
+}
+
+.scroll-bar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    @apply dark:bg-foreground bg-foreground;
+  }
 }

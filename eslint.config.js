@@ -41,6 +41,9 @@ export default [
       'no-unused-vars': 'warn',
       'react/no-unescaped-entities': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/ban-ts-ignore': 'off',
+      '@ts-ignore': 'off',
 
       // Plugin-specific rules
       'unused-imports/no-unused-imports': 'error',
