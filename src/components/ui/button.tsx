@@ -1,5 +1,5 @@
+import type { ButtonTypes } from '@/types/types-components'
 import { cn } from '@/utils/cn'
-import { ButtonTypes } from '@/types/types-components'
 
 export function Button({ className, children }: ButtonTypes) {
   return (

@@ -10,7 +10,7 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    ignores: ['dist'],
+    ignores: ['dist/', 'tsconfig.json'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
